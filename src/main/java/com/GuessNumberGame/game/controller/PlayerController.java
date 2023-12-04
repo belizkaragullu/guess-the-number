@@ -32,9 +32,4 @@ public class PlayerController {
         return ResponseEntity.ok(player);
     }
 
-    @GetMapping("/best-scores")
-        public ResponseEntity<List<Player>> getBestScores(){
-            List<Player> playerList =playerService.getEveryPlayersBestScoreInAscOrder();
-            return ResponseEntity.ok(playerList);
-    }
 }

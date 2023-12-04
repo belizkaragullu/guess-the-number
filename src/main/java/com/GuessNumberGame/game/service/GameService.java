@@ -25,7 +25,6 @@ public class GameService {
                 .orElseThrow(()-> new GameNotFoundException("Game " + gameId + " can not found." ));
     }
     public List<Game> getGamesByStatus(GameStatus gameStatus) {
-
         return gameRepository.findByGameStatus(gameStatus);
     }
 
@@ -42,7 +41,7 @@ public class GameService {
         game.setPlayer(player);
         game.setGameStatus(GameStatus.IN_PROGRESS); // finish olana kadar in progress statusunde olacak
 
-        game = gameRepository.save(game);
+        gameRepository.save(game);
 
         if(game != null){
             return game.getId(); //kullanıcıya geri donduruluyor ki api tarafında hangi gameid kullancagını bilsin

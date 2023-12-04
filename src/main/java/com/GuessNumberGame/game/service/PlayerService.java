@@ -25,31 +25,13 @@ public class PlayerService {
     }
 
     public List<Player> getAllPlayers(){
+
         return playerRepository.findAll();
     }
 
     public Player findPlayerById(Long playerId){
         return playerRepository.findById(playerId)
                 .orElseThrow(()-> new PlayerNotFoundException("Player not found, please register first."));
-    }
-
-    public List<Player> getEveryPlayersBestScoreInAscOrder(){
-
-        List<Player> players = playerRepository.findAll();
-
-        players.forEach(player -> {
-            List<Game> games = player.getGames();
-            games.sort(Comparator.comparingInt(Game::getTotalAttempts));
-            if (!games.isEmpty()) {
-                Game bestGame = games.get(0);
-                List<Game> bestGameList = new ArrayList<>();
-                bestGameList.add(new Game(bestGame.getId(), bestGame.getTotalAttempts()));
-                player.setGames(bestGameList);
-            }
-        });
-
-        players.sort(Comparator.comparingInt(player -> player.getGames().get(0).getTotalAttempts()));
-        return players;
     }
 
 }
