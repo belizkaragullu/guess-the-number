@@ -1,6 +1,6 @@
-package com.GuessNumberGame.repository;
+package com.GuessNumberGame.game.repository;
 
-import com.GuessNumberGame.model.Player;
+import com.GuessNumberGame.game.model.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.GuessNumberGame.controller;
+package com.GuessNumberGame.game.controller;
 
-import com.GuessNumberGame.model.Player;
-import com.GuessNumberGame.service.PlayerService;
+import com.GuessNumberGame.game.model.Player;
+import com.GuessNumberGame.game.service.PlayerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,8 +15,8 @@ public class PlayerController {
 
     private final PlayerService playerService;
 
-    @PostMapping("/create")
-    public ResponseEntity<Player> createPlayer(@RequestParam String username){
+    @PostMapping("/create/{username}")
+    public ResponseEntity<Player> createPlayer(@PathVariable String username){
         Player newPlayer = playerService.createPlayer(username);
         return ResponseEntity.ok(newPlayer);
 

@@ -1,10 +1,10 @@
-package com.GuessNumberGame.service;
+package com.GuessNumberGame.game.service;
 
 
-import com.GuessNumberGame.exception.PlayerNotFoundException;
-import com.GuessNumberGame.model.Game;
-import com.GuessNumberGame.model.Player;
-import com.GuessNumberGame.repository.PlayerRepository;
+import com.GuessNumberGame.game.exception.PlayerNotFoundException;
+import com.GuessNumberGame.game.model.Game;
+import com.GuessNumberGame.game.model.Player;
+import com.GuessNumberGame.game.repository.PlayerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PlayerService {
     private final PlayerRepository playerRepository;
-    private final GameService gameService; //kullanamadım
+
 
     public Player createPlayer(String username){
         Player player = new Player();

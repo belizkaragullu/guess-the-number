@@ -1,7 +1,7 @@
-package com.GuessNumberGame.repository;
+package com.GuessNumberGame.game.repository;
 
-import com.GuessNumberGame.model.Game;
-import com.GuessNumberGame.model.GameStatus;
+import com.GuessNumberGame.game.model.Game;
+import com.GuessNumberGame.game.model.GameStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

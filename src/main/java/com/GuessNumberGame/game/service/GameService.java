@@ -1,10 +1,10 @@
-package com.GuessNumberGame.service;
+package com.GuessNumberGame.game.service;
 
-import com.GuessNumberGame.exception.GameNotFoundException;
-import com.GuessNumberGame.model.Game;
-import com.GuessNumberGame.model.GameStatus;
-import com.GuessNumberGame.model.Player;
-import com.GuessNumberGame.repository.GameRepository;
+import com.GuessNumberGame.game.exception.GameNotFoundException;
+import com.GuessNumberGame.game.model.Game;
+import com.GuessNumberGame.game.model.GameStatus;
+import com.GuessNumberGame.game.model.Player;
+import com.GuessNumberGame.game.repository.GameRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -129,4 +129,5 @@ public class GameService {
 
         return gamesWithUsernames;
     }
+
 }

@@ -1,8 +1,8 @@
-package com.GuessNumberGame.controller;
+package com.GuessNumberGame.game.controller;
 
-import com.GuessNumberGame.model.Game;
-import com.GuessNumberGame.model.GameStatus;
-import com.GuessNumberGame.service.GameService;
+import com.GuessNumberGame.game.model.Game;
+import com.GuessNumberGame.game.model.GameStatus;
+import com.GuessNumberGame.game.service.GameService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

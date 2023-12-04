@@ -1,4 +1,4 @@
-package com.GuessNumberGame.model;
+package com.GuessNumberGame.game.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

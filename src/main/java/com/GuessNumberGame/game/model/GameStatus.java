@@ -1,4 +1,4 @@
-package com.GuessNumberGame.model;
+package com.GuessNumberGame.game.model;
 
 public enum GameStatus {
     SUCCESSFUL,
