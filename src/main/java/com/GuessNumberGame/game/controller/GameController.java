@@ -31,7 +31,7 @@ public class GameController {
 
     //guess yazariz donen ifade serviste yazıldı
     @PostMapping ("/guess/{gameId}/{guess}")
-    ResponseEntity<String> makeGuess(@RequestBody Long gameId, @PathVariable int guess){
+    ResponseEntity<String> makeGuess(@PathVariable Long gameId, @PathVariable int guess){
         String result= gameService.makeGuess(gameId, guess);
         return ResponseEntity.ok(result);
     }
@@ -87,18 +87,6 @@ public class GameController {
         return ResponseEntity.ok(gameList);
     }
 
-    //bir playerın oynadıgı oyunlardan attempti en az olanı
-    @GetMapping("player-minimum-guess-attempt-game/{playerId}")
-    public ResponseEntity<Game> getMinimumAttemptGameByPlayerId(@PathVariable Long playerId){
-        Game game =gameService.getMinimumAttemptGameOfAPlayer(playerId);
-
-        if(game!=null){
-            return ResponseEntity.ok(game);
-        }
-        else {
-            return ResponseEntity.notFound().build(); //???
-        }
-    }
 
     //tum oyunların attempte gore sıralanısı ve player username eklenmıs hali STRING METNI donuyor
     @GetMapping("/sorted-by-guess-attempts-with-usernames")

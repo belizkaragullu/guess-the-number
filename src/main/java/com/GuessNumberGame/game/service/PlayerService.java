@@ -52,22 +52,4 @@ public class PlayerService {
         return players;
     }
 
- // YUKARIDAKİ FONKSİYONU GAME SERVİCEDEN HER PLAYERIN EN BASARILI OLDUGU OYUNU ALIP, PLAYERLARI EN BASARILI OLDUKLARI OYUN İLE KIYASLAMAK İSTEDİM AMA YAZAMADIM
-   /* public List<Player> getBestScores() {
-
-        List<Player> players = playerRepository.findAll();
-
-
-
-        for (Player player : players) {
-
-            List<Game> minimumAttemptGames = gameService.getMinimumAttemptGameOfAPlayer(player.getId());
-            player.setGames(minimumAttemptGames);
-        }
-
-        players.sort(Comparator.comparingInt(player -> player.getGames().get(0).getTotalAttempts()));
-        return players;
-    }
-
-*/
 }
