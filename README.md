@@ -13,7 +13,6 @@ If the user wants to quit the game before it's finished, the game is marked as U
 Successfully completed games are marked as SUCCESSFUL and isFinished(true).
 
 Endpoints Used in Player Controller
-
 - POST /game/start/{playerId}  
 - POST /game/guess/{gameId}/{guess}
 - PUT /game/quit/{gameId}
@@ -26,7 +25,6 @@ Endpoints Used in Player Controller
 - GET /game/sorted-by-guess-attempts-with-usernames
 
 Endpoints Used in Player Controller
-
 - POST /players/create/{username}
 - GET /players/get
 - GET /players/get/{playerId}
