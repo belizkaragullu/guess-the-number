@@ -34,7 +34,7 @@ public class GameService {
         Player player = playerService.findPlayerById(playerId);
 
         Random random = new Random();
-        int randomNumber =random.nextInt(5); //sımdılık
+        int randomNumber =random.nextInt(100)+1;
         Game game = new Game();
         game.setRandomNumber(randomNumber);
         game.setGameFinished(false);
