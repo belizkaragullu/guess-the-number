@@ -1,6 +1,6 @@
 "# guess-the-number" 
 
-The project is a guessing game where it generates a random number between 1 and 100. The player tries to guess this number while receiving feedback from the project (such as whether the guess is less than, greater than or equal to actual number).
+This is a Spring Boot guessing number project. Game generates a random number between 1 and 100 and the player tries to guess this number while receiving feedback from the game (such as whether the guess is less than, greater than or equal to actual number).
 
 Before starting the game, the player must be previously saved in the database. Therefore, we either create a player by entering a username or start the game using an existing player (players can play multiple games). We specify which player we are playing with using the playerID. The application creates a new game and returns a key that shows which game we are playing. We use this key to enter our guesses. The number of attempts made is recorded during the game.
 
